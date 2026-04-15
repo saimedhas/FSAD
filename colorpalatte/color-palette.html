@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Color Palette</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .palette {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+        .color-swatch {
+            aspect-ratio: 1;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: end;
+            padding: 20px;
+            color: white;
+            font-weight: bold;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        .color-swatch:hover {
+            transform: scale(1.05);
+        }
+        .color-name {
+            background: rgba(0,0,0,0.3);
+            padding: 5px 10px;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        #red { background-color: #e74c3c; }
+        #orange { background-color: #f39c12; }
+        #yellow { background-color: #f1c40f; }
+        #green { background-color: #27ae60; }
+        #blue { background-color: #3498db; }
+        #purple { background-color: #9b59b6; }
+        #pink { background-color: #e91e63; }
+        #gray { background-color: #7f8c8d; color: #333; }
+    </style>
+</head>
+<body>
+    <h1>Simple Color Palette</h1>
+    <div class="palette">
+        <div class="color-swatch" id="red" title="#e74c3c">
+            <div class="color-name">Red</div>
+        </div>
+        <div class="color-swatch" id="orange" title="#f39c12">
+            <div class="color-name">Orange</div>
+        </div>
+        <div class="color-swatch" id="yellow" title="#f1c40f">
+            <div class="color-name">Yellow</div>
+        </div>
+        <div class="color-swatch" id="green" title="#27ae60">
+            <div class="color-name">Green</div>
+        </div>
+        <div class="color-swatch" id="blue" title="#3498db">
+            <div class="color-name">Blue</div>
+        </div>
+        <div class="color-swatch" id="purple" title="#9b59b6">
+            <div class="color-name">Purple</div>
+        </div>
+        <div class="color-swatch" id="pink" title="#e91e63">
+            <div class="color-name">Pink</div>
+        </div>
+        <div class="color-swatch" id="gray" title="#7f8c8d">
+            <div class="color-name">Gray</div>
+        </div>
+    </div>
+</body>
+</html>
